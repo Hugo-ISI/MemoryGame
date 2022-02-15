@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu memoire</title>
+    <link rel="stylesheet" href="./css/memoire.css" />
+    <script src="js/memory.js"></script>
+</head>
+
+<body>
+    <h1>Jeu memoire:</h1>
+    <section id="dataField">
+        <h2>Faites votre choix:</h2>
+        <label for="themes">theme:</label><select name="themes" id="themes" required>
+            <option value="">~</option>
+            <option value="0">Animal</option>
+            <option value="1">Sport</option>
+            <option value="2">Metier</option>
+        </select>
+        <button id="submitBtn">Commencer</button>
+    </section>
+    <div id='gameField' class="gridContainer">
+        <div id="pic1" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pic2" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pic3" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pic4" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pic5" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div id="pic6" class="img blockClick">
+            <div class="flipper">
+                <div class="thefront">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+                <div class="theback">
+                    <img src="../image/0.jpg" alt="" />
+                </div>
+            </div>
+        </div>
+        <div class="score">
+
+            <div>
+                <label for="chrono">temps ecoule: </label>
+                <input type="number" name="chrono" id="chrono" value=0 disabled />
+            </div>
+            <div>
+                <label for="score">score: </label>
+                <input type="number" name="score" id="score" value=0 disabled />
+            </div>
+            <div>
+                <label for="best">meilleur temps : </label>
+                <input type="number" name="best" id="best" value=0 disabled />
+            </div>
+            <br><br>
+            <input type="button" value="start" id="start" />
+            <input type="button" value="quit" id="quit" />
+        </div>
+    </div>
+    <script>
+        memoryModule.init()
+    </script>
+</body>
+
+</html>
